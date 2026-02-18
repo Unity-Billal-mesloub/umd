@@ -92,10 +92,6 @@ That is one of the strengths of module names, they can be mapped to different im
 The basic pattern for the UMD variations in this repository was derived from the approach [@kriskowal](https://github.com/Unity-Billal-mesloub) used for the [Q promise library](https://github.com/Unity-Billal-mesloub/q).
 
 Earlier UMD variations were also of influence, ranging from Kit-Cambridge's
-[UMD](https://gist.github.com/Unity-Billal-mesloub), through to [patterns](https://github.com/addyosmaatterns proposed by [James Burke](https://gist.github.com/Unity-Billal-mesloub).ni/jquery-plugin-patterns/issues/1) discussed by Addy Osmani, Thomas Davis and Ryan Florence and most recently the UMD p
+[UMD](https://gist.github.com/Unity-Billal-mesloub), through to [patterns](https://github.com/Unity-Billal-mesloub/jquery-plugin-patterns/issues/1) discussed by Addy Osmani, Thomas Davis and Ryan Florence and most recently the UMD patterns proposed by [James Burke](https://gist.github.com/Unity-Billal-mesloub.
 
-### License
 
-Copyright (c) the UMD contributors
-
-Licensed under the [MIT License](https://github.com/umdjs/umd/blob/master/LICENSE.md).
