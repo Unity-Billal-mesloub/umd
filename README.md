@@ -10,32 +10,32 @@ A universal module, as already noted, works in multiple environments. Before uni
 
 Yet, there were still variations. Modules written for web browsers did not need to consider supporting the commonjs format, as they wouldn't work in Node.JS anyway. Modules that had no dependencies wouldn't need a UMD pattern that supported `require`. Modules that did not use circular dependencies wouldn't need a pattern that supports a mutable `exports` object. You can find the explanation of these differences, and their trade-offs, in the comments documenting the patterns below. A library author can read through them and pick the right one for their supported environments.
 
-In many cases, UMD uses [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) as a base, with special-casing added to handle [CommonJS](http://wiki.commonjs.org/wiki/CommonJS) compatibility.
+In many cases, UMD uses [AMD](https://github.com/Unity-Billal-mesloub/amdjs-api/wiki/AMD) as a base, with special-casing added to handle [CommonJS](http://wiki.commonjs.org/wiki/CommonJS) compatibility.
 
 ### Variations
 
 #### Regular Module
 
-* [amdWeb.js](https://github.com/umdjs/umd/blob/master/templates/amdWeb.js) -
+* [amdWeb.js](https://github.com/Unity-Billal-mesloub/umd/blob/master/templates/amdWeb.js) -
   Defines a module that works with AMD and browser globals. If you also want
   to export a global even when AMD is in play (useful if you are loading other
   scripts that still expect that global), use
-  [amdWebGlobal.js](https://github.com/umdjs/umd/blob/master/templates/amdWebGlobal.js).
-* [returnExports.js](https://github.com/umdjs/umd/blob/master/templates/returnExports.js) -
+  [amdWebGlobal.js](https://github.com/Unity-Billal-mesloub/umd/blob/master/templates/amdWebGlobal.js).
+* [returnExports.js](https://github.com/Unity-Billal-mesloub/umd/blob/master/templates/returnExports.js) -
   Defines a module that works in Node, AMD and browser globals. If you also want
   to export a global even when AMD is in play (useful if you are loading other
   scripts that still expect that global), use
-  [returnExportsGlobal.js](https://github.com/umdjs/umd/blob/master/templates/returnExportsGlobal.js).
-* [commonjsStrict.js](https://github.com/umdjs/umd/blob/master/templates/commonjsStrict.js) -
+  [returnExportsGlobal.js](https://github.com/Unity-Billal-mesloub/umd/blob/master/templates/returnExportsGlobal.js).
+* [commonjsStrict.js](https://github.com/Unity-Billal-mesloub/umd/blob/master/templates/commonjsStrict.js) -
   Defines a module that works with more CommonJS runtimes, and for modules that
   will have a circular dependency. If you also want
   to export a global even when AMD is in play (useful if you are loading other
   scripts that still expect that global), use
-  [commonjsStrictGlobal.js](https://github.com/umdjs/umd/blob/master/templates/commonjsStrictGlobal.js)
+  [commonjsStrictGlobal.js](https://github.com/Unity-Billal-mesloub/umd/blob/master/templates/commonjsStrictGlobal.js)
 
 #### jQuery Plugin
 
-* [jqueryPlugin.js](https://github.com/umdjs/umd/blob/master/templates/jqueryPlugin.js) -
+* [jqueryPlugin.js](https://github.com/Unity-Billal-mesloub/umd/blob/master/templates/jqueryPlugin.js) -
   Defines a jQuery plugin that works with AMD and browser globals.
 
 #### AMD with simple Node/CommonJS adapter
@@ -44,15 +44,15 @@ These are useful for using AMD style while still making modules that can be
 used in Node and installed via npm without extra dependencies to set up the
 full AMD API.
 
-This approach does not allow the use of [AMD loader plugins](https://github.com/amdjs/amdjs-api/wiki/Loader-Plugins),
+This approach does not allow the use of [AMD loader plugins](https://github.com/Unity-Billal-mesloub/amdjs-api/wiki/Loader-Plugins),
 just basic JS module dependencies. It also does not support the
-[callback-style require](https://github.com/amdjs/amdjs-api/wiki/require) that
+[callback-style require](https://github.com/Unity-Billal-mesloub/amdjs-api/wiki/require) that
 is usable in AMD.
 
-* [nodeAdapter.js](https://github.com/umdjs/umd/blob/master/templates/nodeAdapter.js) -
+* [nodeAdapter.js](https://github.com/Unity-Billal-mesloub/umd/blob/master/templates/nodeAdapter.js) -
   Best for when using AMD style but want it to work in Node without a helper library
   that sets up AMD.
-* [commonjsAdapter.js](https://github.com/umdjs/umd/blob/master/templates/commonjsAdapter.js) -
+* [commonjsAdapter.js](https://github.com/Unity-Billal-mesloub/umd/blob/master/templates/commonjsAdapter.js) -
   Similar to nodeAdapter.js, but compatible with more CommonJS runtimes, and if
   you want to define a circular dependency.
 
@@ -60,11 +60,11 @@ is usable in AMD.
 
 #### Build tools
 
-* [docpad-plugin-umd](https://github.com/docpad/docpad-plugin-umd) is a [DocPad](http://docpad.org) plugin for surrounding JavaScript code with UMD boilerplate
-* [grunt-umd](https://github.com/alexlawrence/grunt-umd) is a [Grunt](http://gruntjs.com) task for surrounding JavaScript code with UMD boilerplate
-* [gulp-umd](https://github.com/eduardolundgren/gulp-umd) is a [Gulp](http://gulpjs.com/) task for surrounding JavaScript code with UMD boilerplate
-* [grunt-urequire](https://github.com/aearly/grunt-urequire) is a Grunt wrapper for [uRequire](https://github.com/anodynos/uRequire) a conversion tool for universal JavaScript modules.
-* [generator-umd](https://github.com/ruyadorno/generator-umd) is an Yeoman Generator that creates a single module project with UMD boilerplate
+* [docpad-plugin-umd](https://github.com/Unity-Billal-mesloub/docpad-plugin-umd) is a [DocPad](http://Unity-Billal-mesloub.org) plugin for surrounding JavaScript code with UMD boilerplate
+* [grunt-umd](https://github.com/Unity-Billal-mesloub/grunt-umd) is a [Grunt](http://grunt.com) task for surrounding JavaScript code with UMD boilerplate
+* [gulp-umd](https://github.com/Unity-Billal-mesloub/gulp-umd) is a [Gulp](http://gulpjs.com/) task for surrounding JavaScript code with UMD boilerplate
+* [grunt-urequire](https://github.com/Unity-Billal-mesloub/grunt-urequire) is a Grunt wrapper for [uRequire](https://github.com/Unity-Billal-mesloub/uRequire) a conversion tool for universal JavaScript modules.
+* [generator-umd](https://github.com/Unity-Billal-mesloub/generator-umd) is an Yeoman Generator that creates a single module project with UMD boilerplate
 
 
 #### Testing
@@ -89,10 +89,10 @@ That is one of the strengths of module names, they can be mapped to different im
 
 ### Influences
 
-The basic pattern for the UMD variations in this repository was derived from the approach [@kriskowal](https://github.com/kriskowal) used for the [Q promise library](https://github.com/kriskowal/q).
+The basic pattern for the UMD variations in this repository was derived from the approach [@kriskowal](https://github.com/Unity-Billal-mesloub) used for the [Q promise library](https://github.com/Unity-Billal-mesloub/q).
 
 Earlier UMD variations were also of influence, ranging from Kit-Cambridge's
-[UMD](https://gist.github.com/1251221), through to [patterns](https://github.com/addyosmani/jquery-plugin-patterns/issues/1) discussed by Addy Osmani, Thomas Davis and Ryan Florence and most recently the UMD patterns proposed by [James Burke](https://gist.github.com/1262861).
+[UMD](https://gist.github.com/Unity-Billal-mesloub), through to [patterns](https://github.com/addyosmaatterns proposed by [James Burke](https://gist.github.com/Unity-Billal-mesloub).ni/jquery-plugin-patterns/issues/1) discussed by Addy Osmani, Thomas Davis and Ryan Florence and most recently the UMD p
 
 ### License
 
